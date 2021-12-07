@@ -26,7 +26,7 @@ struct ContentView: View {
             
             // Input
             Button(action: {
-                print("Button was pressed")
+                isAnswerShowing = true
             }, label: {
                 Text("Check")
             })
@@ -40,6 +40,10 @@ struct ContentView: View {
 
             // Input
             Button(action: {
+                // Hide the answer
+                isAnswerShowing = false
+                
+                // Pick a new card
                 currentCard = listOfCards.randomElement()!
             }, label: {
                 Text("Another")
